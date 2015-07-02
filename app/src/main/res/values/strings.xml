@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">WeekendTravel</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragmen">Hello blank fragment2</string>
+    <string name="title_activity_mapa">Mapa</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="balneareo">balneareo</string>
+    <string name="hostal">hostal</string>
+    <string name="marcadores">Marcadores</string>
+    <string name="Generar">Generar</string>
+
+    <string name="title_activity_activity_lugar">ActivityLugar</string>
+     <string-array name="tabs">
+         <item>Mapas</item>
+         <item>Amigos</item>
+         <item>Rutas</item>
+     </string-array>
+
+
+
+
+</resources>

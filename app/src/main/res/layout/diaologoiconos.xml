@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+    <RadioGroup>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurante"
+            android:id="@+id/restaurante"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:checked="false"
+            android:onClick="onRadioButtonClicked"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balneareo"
+            android:id="@+id/balneareo"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hostal"
+            android:id="@+id/hostal"
+            android:layout_row="1"
+            android:layout_column="0"
+             />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sitio Turistico"
+            android:id="@+id/sitioturistico"
+            android:layout_row="1"
+            android:layout_column="2"   />
+    </RadioGroup>
+    </GridLayout>
+</LinearLayout>

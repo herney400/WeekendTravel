@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->.Light.DarkActionBar
+
+    </style>
+
+
+    <color name="facebook">#3b5999</color>
+    <color name="twitter">#01bbf6</color>
+    <color name="share">#5b9139</color>
+    <color name="list_selector">#BF424242</color>
+    <color name="facebook_pressed">#4a6eba</color>
+    <color name="twitter_pressed">#66ccff</color>
+    <color name="share_pressed">#6cac44</color>
+
+
+     <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+         <item name="android:button">@drawable/balneareo </item>
+     </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+</resources>
