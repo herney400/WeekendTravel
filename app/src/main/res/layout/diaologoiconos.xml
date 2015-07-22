@@ -1,51 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:background="@android:color/white"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary_dark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <EditText
+        android:id="@+id/nombre_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/normal_padding"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="@string/origen"
+        android:inputType="textPersonName"
+        android:padding="@dimen/edit_text_padding"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toLeftOf="@+id/checkBoxUbicacionActual"
+        android:layout_toStartOf="@+id/checkBoxUbicacionActual" />
+
+    <CheckBox
+        android:id="@+id/checkBoxUbicacionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/ubicacion_actual"
+        android:layout_above="@+id/contrasena_input"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/nombre_input" />
 
 
-    <GridLayout
+    <EditText
+        android:id="@+id/contrasena_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_between"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="@string/destino"
+        android:inputType="textPassword"
+        android:padding="@dimen/edit_text_padding"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="@dimen/padding_between"
+        android:layout_marginTop="@dimen/padding_between"
+        android:background="#C8C9CB"
+        android:layout_below="@+id/contrasena_input" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal">
-    <RadioGroup>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Restaurante"
-            android:id="@+id/restaurante"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:checked="false"
-            android:onClick="onRadioButtonClicked"
-            />
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/divider2"
+        android:id="@+id/line">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Balneareo"
-            android:id="@+id/balneareo"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:onClick="onRadioButtonClicked"/>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hostal"
-            android:id="@+id/hostal"
-            android:layout_row="1"
-            android:layout_column="0"
-             />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingTop="@dimen/edit_text_padding"
+                android:text="@string/tipo_transporte"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-        <RadioButton
+            <Spinner
+                android:id="@+id/spinnerTransporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:entries="@array/tipo_transporte" />
+
+
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sitio Turistico"
-            android:id="@+id/sitioturistico"
-            android:layout_row="1"
-            android:layout_column="2"   />
-    </RadioGroup>
-    </GridLayout>
-</LinearLayout>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinnerTransporte"
+            android:paddingTop="@dimen/edit_text_padding"
+            android:text="@string/tipo_ruta"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <Spinner
+            android:id="@+id/spinnerTiporuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:entries="@array/tipo_de_ruta" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinnerTiporuta"
+            android:paddingTop="@dimen/edit_text_padding"
+            android:text="@string/tipo_cilindraje"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <Spinner
+            android:id="@+id/spinnerTipoCilindraje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView5"
+            android:entries="@array/tipo_cilindraje" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/Cancelar"
+            android:layout_width="137dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/button_padding"
+            android:paddingTop="@dimen/button_padding"
+            android:text="@string/cancelar"
+            android:textColor="@android:color/white"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true" />
+
+        <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="163dp"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/button_padding"
+        android:paddingTop="@dimen/button_padding"
+        android:text="@string/aceptar"
+        android:textColor="@android:color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+       android:layout_gravity="left"
+        />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
